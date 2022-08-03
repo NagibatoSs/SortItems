@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5553992528246260130, guid: 02c223120a4f9c946bc9941c7d53bf33, type: 3}
       propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5553992528246260130, guid: 02c223120a4f9c946bc9941c7d53bf33, type: 3}
       propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -138,11 +138,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5553992528246260130, guid: 02c223120a4f9c946bc9941c7d53bf33, type: 3}
       propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadNextLevel
+      value: LoadLevel
       objectReference: {fileID: 0}
     - target: {fileID: 5553992528246260130, guid: 02c223120a4f9c946bc9941c7d53bf33, type: 3}
       propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SortItems.LevelChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553992528246260130, guid: 02c223120a4f9c946bc9941c7d53bf33, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5553992528246260130, guid: 02c223120a4f9c946bc9941c7d53bf33, type: 3}
       propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
