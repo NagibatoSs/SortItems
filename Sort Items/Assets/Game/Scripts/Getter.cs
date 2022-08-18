@@ -76,7 +76,8 @@ namespace SortItems
         {
             if (_item.Type==_type)
             {
-                Destroy(_item.gameObject);
+                _item.OnHideRequest.Invoke();
+                //Destroy(_item.gameObject);
                 count++;
                 onCountChanged.Invoke(this);
                 if (count >= targetCount)
