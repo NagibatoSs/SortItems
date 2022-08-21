@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5664535331263722451, guid: 602602543a7a33e43a9cf511171a0f00, type: 3}
-  _count: 15
+  _count: 30
   _range: {x: 2, y: 0, z: 2}
 --- !u!114 &7678204372834117
 MonoBehaviour:
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 8449175080574776850, guid: 0a19465dff5c0514ca900bcf838d6079, type: 3}
-  _count: 5
+  _count: 3
   _range: {x: 2, y: 1, z: 2}
 --- !u!1 &8580137351489212757
 GameObject:
