@@ -13,8 +13,6 @@ namespace SortItems
         private void Start() 
         {
             var lastLevel = PlayerPrefs.GetInt("Level",0);
-            //Debug.Log("The key value is " + lastLevel);
-            //Debug.Log("The level number value is " + levelNumber);
             if (lastLevel != levelNumber)
                 LoadLevel(lastLevel);
         }
@@ -28,7 +26,6 @@ namespace SortItems
                 Destroy(g);
             Vector3 vector = new Vector3(0,0,0);  
             PlayerPrefs.SetInt("Level",level);  
-            //Debug.Log("The key value is aaa " + PlayerPrefs.GetInt("Level",0));
             var newLevel = Instantiate(Resources.Load<GameObject>("Prefabs/Levels/Level"+(level)),vector,Quaternion.identity);
         }
         

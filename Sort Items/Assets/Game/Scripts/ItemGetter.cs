@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace SortItems
 {
-    public class Getter : MonoBehaviour
+    public class ItemGetter : MonoBehaviour
     {
         [SerializeField] public ItemType _type;
         private DragItem _item;
@@ -12,9 +14,10 @@ namespace SortItems
         
         public int targetCount = 1;
         private int count = 0;
-        private bool isActive = true;
+        public bool isActive = false;
 
-        public UnityEvent<Getter> onCountChanged;
+        public UnityEvent<ItemGetter> onCountChanged;
+        public UnityEvent onRemove;
 
         private void Start() 
         {
@@ -35,26 +38,23 @@ namespace SortItems
         private void OnTriggerStay(Collider other) 
         {
             if (!isActive) return;
-            var item = other.attachedRigidbody.GetComponent<DragItem>();
-            
-            if (item!=null && item.IsDraggable==true)
+            var item = other.gameObject.GetComponent<DragItem>();
+            if (item==null) return;
+            if (item!=null)// && item.IsDraggable==true)
             {
+                Debug.Log("proverka color");
                 _item = item;
+                Debug.Log(_item.Type+" "+_type);
                 if (_item.Type == _type)
                 {
+                    Debug.Log("green");
                     _material.color = Color.green;
                 }
                 else 
                 {
+                    Debug.Log("red");
                     _material.color = Color.red;
                 }
-                return;
-            }
-            if (item.IsDraggable == false && _item==item)
-            {
-                TryGetItem();
-                _item=null;
-                _material.color = _defaultColor;
                 return;
             }
         }
@@ -62,9 +62,13 @@ namespace SortItems
         private void OnTriggerExit(Collider other)
         {
             if (!isActive) return;
-            var item = other.attachedRigidbody.GetComponent<DragItem>();
+            var item = other.gameObject.GetComponent<DragItem>();
+            if (item==null) return;
+            Debug.Log("exit");
+            Debug.Log(isActive+" isactive");
             if (_item == item)
             {
+                Debug.Log("tryget exit");
                 _material.color = _defaultColor;
                 if (item.IsDraggable == false)
                     TryGetItem();
@@ -76,7 +80,11 @@ namespace SortItems
         {
             if (_item.Type==_type)
             {
+                Debug.Log("remove");
                 _item.OnHideRequest.Invoke();
+                var item2 = this.gameObject.GetComponent<DragItem>();
+                item2.OnHideRequest.Invoke();
+                //сюда событие на -2 из таргетов скор хендлера
                 count++;
                 onCountChanged.Invoke(this);
                 if (count >= targetCount)

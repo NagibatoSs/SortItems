@@ -12,6 +12,7 @@ namespace SortItems
         public ItemType Type { get => _type; }
         private Rigidbody _rigidbody;
         public bool IsDraggable {get; private set;}
+        [SerializeField] private ItemGetter outItem;
 
         private void Start() 
         {
@@ -21,8 +22,8 @@ namespace SortItems
         public void OnPointerDown(PointerEventData eventData)
         {
             _rigidbody.isKinematic = true;
-            _rigidbody.isKinematic = true;
             IsDraggable = true;
+            outItem.isActive=true;
         }
 
         public void OnPointerUp(PointerEventData eventData)
@@ -31,6 +32,7 @@ namespace SortItems
             _rigidbody.isKinematic = false;
             _rigidbody.AddForce(Vector3.up*upForce);
             IsDraggable = false;
+            outItem.isActive=false;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -40,6 +42,7 @@ namespace SortItems
             {
                 _rigidbody.isKinematic = false;
                 IsDraggable = false;
+                outItem.isActive=false;
                 return;
             }
             var position = eventData.pointerCurrentRaycast.worldPosition;
