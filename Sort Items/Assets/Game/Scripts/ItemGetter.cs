@@ -11,10 +11,11 @@ namespace SortItems
         private DragItem _item;
         [HideInInspector] public Material _material {get; set;}
         [HideInInspector] public Color _defaultColor {get;private set;}
+        [SerializeField] public GetterParameters _getter;
         
         public int targetCount = 1;
         private int count = 0;
-        public bool isActive = false;
+        [HideInInspector] public bool isActive = false;
 
         public UnityEvent<ItemGetter> onCountChanged;
         public UnityEvent onRemove;
@@ -23,6 +24,11 @@ namespace SortItems
         {
             _material = GetComponent<MeshRenderer>().material;
             _defaultColor = _material.color;
+        }
+
+        public void AddCountToGetter()
+        {
+            _getter.count++;
         }
 
         public void SetCount(int value)
@@ -40,23 +46,9 @@ namespace SortItems
             if (!isActive) return;
             var item = other.gameObject.GetComponent<DragItem>();
             if (item==null) return;
-            if (item!=null)// && item.IsDraggable==true)
-            {
-                Debug.Log("proverka color");
+            if (item!=null)
                 _item = item;
-                Debug.Log(_item.Type+" "+_type);
-                if (_item.Type == _type)
-                {
-                    Debug.Log("green");
-                    _material.color = Color.green;
-                }
-                else 
-                {
-                    Debug.Log("red");
-                    _material.color = Color.red;
-                }
                 return;
-            }
         }
 
         private void OnTriggerExit(Collider other)
@@ -65,7 +57,6 @@ namespace SortItems
             var item = other.gameObject.GetComponent<DragItem>();
             if (item==null) return;
             Debug.Log("exit");
-            Debug.Log(isActive+" isactive");
             if (_item == item)
             {
                 Debug.Log("tryget exit");
@@ -84,7 +75,11 @@ namespace SortItems
                 _item.OnHideRequest.Invoke();
                 var item2 = this.gameObject.GetComponent<DragItem>();
                 item2.OnHideRequest.Invoke();
-                //сюда событие на -2 из таргетов скор хендлера
+                _item.gameObject.GetComponents<BoxCollider>()[0].enabled = false;
+                item2.gameObject.GetComponents<BoxCollider>()[0].enabled = false;
+                _item.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
+                item2.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
+                onRemove.Invoke();
                 count++;
                 onCountChanged.Invoke(this);
                 if (count >= targetCount)

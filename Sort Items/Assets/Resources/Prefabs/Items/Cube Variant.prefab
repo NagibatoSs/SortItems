@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
+  _getter:
+    getter: {fileID: 0}
+    targetCount: 0
+    count: 0
   targetCount: 1
   isActive: 0
   onCountChanged:
@@ -124,6 +128,10 @@ PrefabInstance:
       propertyPath: outItem
       value: 
       objectReference: {fileID: 8186249741031336623}
+    - target: {fileID: -5096799326260557202, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: upForce
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: -2314464212274565567, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -287,8 +295,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2066847, y: 1.2066847, z: 1.2066848}
-  m_Center: {x: -0.07526414, y: 0, z: -0.0331912}
+  m_Size: {x: 1.2461205, y: 1.2461205, z: 1.2461207}
+  m_Center: {x: -0.07526414, y: 0.019717868, z: -0.033191256}
 --- !u!4 &5664535331263722454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4933178618989222942, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}

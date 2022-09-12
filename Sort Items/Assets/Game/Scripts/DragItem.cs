@@ -6,7 +6,7 @@ namespace SortItems
 {
     public class DragItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
-        [SerializeField] private float upForce = 50f;
+        [SerializeField] public float upForce = 50f;
         [SerializeField] private ItemType _type;
         public UnityEvent OnHideRequest;
         public ItemType Type { get => _type; }
