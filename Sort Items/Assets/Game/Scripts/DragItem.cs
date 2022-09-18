@@ -8,6 +8,7 @@ namespace SortItems
     {
         [SerializeField] public float upForce = 50f;
         [SerializeField] private ItemType _type;
+        [SerializeField] public string _itemId;
         public UnityEvent OnHideRequest;
         public ItemType Type { get => _type; }
         private Rigidbody _rigidbody;

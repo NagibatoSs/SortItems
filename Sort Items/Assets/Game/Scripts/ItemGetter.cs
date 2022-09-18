@@ -8,6 +8,7 @@ namespace SortItems
     public class ItemGetter : MonoBehaviour
     {
         [SerializeField] public ItemType _type;
+        [SerializeField] public string _itemId;
         private DragItem _item;
         [HideInInspector] public Material _material {get; set;}
         [HideInInspector] public Color _defaultColor {get;private set;}
@@ -69,7 +70,7 @@ namespace SortItems
 
         private void TryGetItem()
         {
-            if (_item.Type==_type)
+            if (_item.Type==_type && _item._itemId==_itemId)
             {
                 Debug.Log("remove");
                 _item.OnHideRequest.Invoke();
@@ -79,6 +80,7 @@ namespace SortItems
                 item2.gameObject.GetComponents<BoxCollider>()[0].enabled = false;
                 _item.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
                 item2.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
+                Debug.Log("on remove invoke");
                 onRemove.Invoke();
                 count++;
                 onCountChanged.Invoke(this);

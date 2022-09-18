@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SortItems
 {
     [System.Serializable]
-    public class ScriptableModel<TModel> : ScriptableObject where TModel:Model, new()
+    public class ScriptableModel<TModel> : ScriptableObject, IStorable where TModel:Model, new()
     {
         [SerializeField] protected TModel _model;
+
+        public UnityEvent OnLoad;
+        public UnityEvent OnSave;
 
         public TModel Model
         {
             get => _model;
-            set 
-            {
-                _model = value;
-            }
+            set => _model = value;
         }
 
         public bool Load()
@@ -31,7 +32,11 @@ namespace SortItems
             TModel model = new TModel();
             var text = File.ReadAllText(GetStoragePath(name));
             JsonUtility.FromJsonOverwrite(text,model);
+
+            Model.OnChange.RemoveAllListeners();
             Model = model;
+
+            OnLoad.Invoke();
             return true;
         }
 
@@ -47,6 +52,7 @@ namespace SortItems
                 Debug.Log(e);
                 return false;
             }
+            OnSave.Invoke();
             return true;
         }
 

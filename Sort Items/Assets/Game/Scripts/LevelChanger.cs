@@ -13,6 +13,7 @@ namespace SortItems
         private void Start() 
         {
             var lastLevel = PlayerPrefs.GetInt("Level",0);
+            Debug.Log(lastLevel+" last, "+levelNumber+" now");
             if (lastLevel != levelNumber)
                 LoadLevel(lastLevel);
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SortItems
 {
@@ -9,24 +10,57 @@ namespace SortItems
         [SerializeField] protected PlayerScriptableModel _playerScrModel;
         public PlayerScriptableModel PlayerScriptableModel => _playerScrModel;
 
-        public void IncreaseScore(int value)
+        public UnityEvent OnModelChange = new UnityEvent();
+
+        protected void OnEnable() 
         {
-            _playerScrModel.AddScore(value);
+            Debug.Log("enable psmProvider");
+            PlayerScriptableModel.OnLoad.AddListener(OnLoadDelegate);
+            PlayerScriptableModel.Model.OnChange.AddListener(OnModelChangeDelegate);
         }
 
-        public void DecreaseScore(int value)
+        protected void OnDisable() 
         {
-            _playerScrModel.AddScore(-value);
+            PlayerScriptableModel.OnLoad.RemoveListener(OnLoadDelegate);
+            PlayerScriptableModel.Model.OnChange.RemoveListener(OnModelChangeDelegate);
+        }
+
+        public void AddWinCoins()
+        {
+            PlayerScriptableModel.AddCoin(5);
+            PlayerScriptableModel.Save();
+        }
+
+        public void IncreaseCoin(int value)
+        {
+            _playerScrModel.AddCoin(value);
+        }
+
+        public void DecreaseCoin(int value)
+        {
+            _playerScrModel.AddCoin(-value);
         }
 
         public void Load()
         {
             PlayerScriptableModel.Load();
+            PlayerScriptableModel.Model.OnChange.AddListener(OnModelChangeDelegate);
         }
 
         public void Save()
         {
             PlayerScriptableModel.Save();
+        }
+
+        protected void OnModelChangeDelegate()
+        {
+            OnModelChange.Invoke();
+        }
+
+        public void OnLoadDelegate()
+        {
+            Debug.Log("onLoadDel");
+            PlayerScriptableModel.Model.OnChange.AddListener(OnModelChangeDelegate);
         }
     }
 }

@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 0
+  _itemId: 
   _getter:
     getter: {fileID: 0}
     targetCount: 0
@@ -125,6 +126,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5096799326260557202, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: _itemId
+      value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: -5096799326260557202, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
       propertyPath: outItem
       value: 
       objectReference: {fileID: 8186249741031336623}
@@ -136,6 +141,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 00da5e38655756f4d857c5be800a746e, type: 2}
+    - target: {fileID: -328422154457168537, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: _itemId
+      value: Cube
+      objectReference: {fileID: 0}
     - target: {fileID: -328422154457168537, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
       propertyPath: onRemove.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -7,11 +7,11 @@ namespace SortItems
     [CreateAssetMenu(fileName="PlayerScriptableModel", menuName="Create PlayerScriptableModel", order=1)]
     public class PlayerScriptableModel : ScriptableModel<PlayerModel>
     {
-        public bool AddScore(int value)
+        public bool AddCoin(int value)
         {
-            if (Model.Score + value < 0) 
+            if (Model.Coin + value < 0) 
                 return false;
-            Model.Score +=value;
+            Model.Coin +=value;
             return true;
         }
 

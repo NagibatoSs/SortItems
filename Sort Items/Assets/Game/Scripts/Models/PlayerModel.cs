@@ -8,24 +8,21 @@ namespace SortItems
     public class PlayerModel : Model
     {
         [SerializeField] protected string _playerName;
-        [SerializeField] protected int _score;
+        [SerializeField] protected int _coin;
 
         public string PlayerName 
         {
             get => _playerName;
-            set 
-            {
-                _playerName = value;
-            }
+            set => SetData(ref _playerName,value);
         }
-
-        public int Score
+        
+        public int Coin
         {
-            get => _score;
+            get => _coin;
             set
             {
                 if (value<0) return;
-                _score=value;
+                SetData(ref _coin,value);
             }
 
         }

@@ -32,6 +32,11 @@ namespace SortItems
                 }
         }
 
+        public void IncreaseCount()
+        {
+            count++;
+        }
+
         private void OnTriggerStay(Collider other) 
         {
             if (!isActive) return;
