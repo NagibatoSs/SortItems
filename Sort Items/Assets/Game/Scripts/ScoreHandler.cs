@@ -31,7 +31,6 @@ namespace SortItems
 
         public void OnCountChanged(Getter getter)
         {
-            Debug.Log("on count changed");
             for (int i = 0; i<_getters.Length; i++)
             {
                 ref var item = ref _getters[i];

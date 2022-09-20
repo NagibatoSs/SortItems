@@ -18,6 +18,12 @@ namespace SortItems
                 LoadLevel(lastLevel);
         }
 
+        public void LoadNext()
+        {
+            levelNumber++;
+            LoadLevel(levelNumber);
+        }
+
         public void LoadLevel(int level)
         { 
             if (oldItems!=null)

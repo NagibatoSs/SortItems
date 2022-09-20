@@ -7,6 +7,7 @@ namespace SortItems
     {
         [SerializeField] private GameStateMachine _gameStateMachine;
         [SerializeField] private Animator _animator;
+        [SerializeField] private string canvasName;
         public GameStateMachine GameStateMachine => _gameStateMachine;
        // [SerializeField] List<Canvas>
         public UnityEvent OnChangeState;
@@ -28,39 +29,9 @@ namespace SortItems
 
         private void OnChangeStateDelegate()
         {
+            Debug.Log("canvasName "+canvasName+ " GameState "+GameStateMachine.GameState.ToString());
+            if (canvasName==GameStateMachine.GameState.ToString())
             OnChangeState.Invoke();
         }
-
-        public void OpenUI()
-        {
-            _animator.SetTrigger("Open");
-
-        }
-
-        public void CloseUI()
-        {
-            _animator.SetTrigger("Close");
-        }
-
-        public void MasterUI()
-        {
-            switch (GameStateMachine.GameState)
-                {
-                case State.Play:
-                    break;
-                case State.Menu:
-                    break;
-                case State.Win:
-                    break;
-                case State.Lose:
-                    break;
-                }
-        }
-
-        // public void OpenPlay()
-        // {
-        //     if (GameStateMachine.GameState==State.Win)
-
-        // }
     }
 }

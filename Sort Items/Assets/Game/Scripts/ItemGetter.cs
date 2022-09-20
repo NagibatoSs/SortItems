@@ -10,37 +10,11 @@ namespace SortItems
         [SerializeField] public ItemType _type;
         [SerializeField] public string _itemId;
         private DragItem _item;
-        [HideInInspector] public Material _material {get; set;}
-        [HideInInspector] public Color _defaultColor {get;private set;}
         [SerializeField] public GetterParameters _getter;
-        
-        public int targetCount = 1;
-        private int count = 0;
+
         [HideInInspector] public bool isActive = false;
 
-        public UnityEvent<ItemGetter> onCountChanged;
         public UnityEvent onRemove;
-
-        private void Start() 
-        {
-            _material = GetComponent<MeshRenderer>().material;
-            _defaultColor = _material.color;
-        }
-
-        public void AddCountToGetter()
-        {
-            _getter.count++;
-        }
-
-        public void SetCount(int value)
-        {
-            targetCount = value;
-            if (count >= targetCount)
-                {
-                    _material.color = Color.gray;
-                    isActive = false;
-                }
-        }
 
         private void OnTriggerStay(Collider other) 
         {
@@ -52,7 +26,7 @@ namespace SortItems
                 return;
         }
 
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if (!isActive) return;
             var item = other.gameObject.GetComponent<DragItem>();
@@ -61,7 +35,6 @@ namespace SortItems
             if (_item == item)
             {
                 Debug.Log("tryget exit");
-                _material.color = _defaultColor;
                 if (item.IsDraggable == false)
                     TryGetItem();
                 _item=null;
@@ -72,23 +45,14 @@ namespace SortItems
         {
             if (_item.Type==_type && _item._itemId==_itemId)
             {
-                Debug.Log("remove");
-                _item.OnHideRequest.Invoke();
                 var item2 = this.gameObject.GetComponent<DragItem>();
-                item2.OnHideRequest.Invoke();
                 _item.gameObject.GetComponents<BoxCollider>()[0].enabled = false;
                 item2.gameObject.GetComponents<BoxCollider>()[0].enabled = false;
                 _item.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
                 item2.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
-                Debug.Log("on remove invoke");
+                _item.OnHideRequest.Invoke();
+                item2.OnHideRequest.Invoke();
                 onRemove.Invoke();
-                count++;
-                onCountChanged.Invoke(this);
-                if (count >= targetCount)
-                {
-                    _material.color = Color.gray;
-                    isActive = false;
-                }
             }
         } 
     }

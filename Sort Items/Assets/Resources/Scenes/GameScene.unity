@@ -249,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
   _animator: {fileID: 54237451}
+  canvasName: Play
   OnChangeState:
     m_PersistentCalls:
       m_Calls:
@@ -1521,9 +1522,73 @@ PrefabInstance:
       propertyPath: onCountChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4057405344448026497, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 608270089}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 54237453}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeStateTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CloseUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SortItems.ChangeGameStateTo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SortItems.GameStateMachineProvider, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
       propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435226563799912992, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+      propertyPath: onFull.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5568373659801875164, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
       propertyPath: m_RootOrder
@@ -1597,7 +1662,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6774516063940776236, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
 --- !u!1 &329269689
 GameObject:
@@ -2456,18 +2522,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1933272031}
-        m_TargetAssemblyTypeName: SortItems.PlayerScriptableModelProvider, Assembly-CSharp
-        m_MethodName: AddWinCoins
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &604573690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2652,6 +2706,26 @@ MonoBehaviour:
   _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
   _gameState: 1
   _animator: {fileID: 1600115797}
+--- !u!1 &608270084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8128353360383923591, guid: 3c28dd37df7378f43a16bc56a00c8a03, type: 3}
+  m_PrefabInstance: {fileID: 325329207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &608270089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608270084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1f2da1a5d1c7d449f7683d59be9094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
+  _gameState: 2
+  _animator: {fileID: 54237451}
 --- !u!1 &620486963
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &620918908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3002,6 +3076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
   _animator: {fileID: 0}
+  canvasName: 
   OnChangeState:
     m_PersistentCalls:
       m_Calls:
@@ -3114,7 +3189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184564, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 101.93991
+      value: 101.93994
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184564, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3130,7 +3205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3142,6 +3217,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
@@ -3157,6 +3236,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1933272031}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1349268402}
+    - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -3166,6 +3249,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
@@ -3181,6 +3268,10 @@ PrefabInstance:
       value: AddWinCoins
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: ChangeStateTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -3191,6 +3282,10 @@ PrefabInstance:
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: SortItems.PlayerScriptableModelProvider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: SortItems.ChangeGameStateTo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
@@ -3210,6 +3305,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 629371746624184566, guid: 09b0f0afa5d209a4e9d7101d3d2cca42, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3829,6 +3928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
   _animator: {fileID: 794866667}
+  canvasName: Lose
   OnChangeState:
     m_PersistentCalls:
       m_Calls: []
@@ -6079,9 +6179,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
   _animator: {fileID: 1458086546}
+  canvasName: Menu
   OnChangeState:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 115786987}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1463962745
 GameObject:
   m_ObjectHideFlags: 0
@@ -6566,7 +6679,6 @@ GameObject:
   - component: {fileID: 1600115798}
   - component: {fileID: 1600115797}
   - component: {fileID: 1600115799}
-  - component: {fileID: 1600115800}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -6679,36 +6791,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
   _animator: {fileID: 1600115797}
+  canvasName: Win
   OnChangeState:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SortItems.PlayerScriptableModelProvider, Assembly-CSharp
-        m_MethodName: IncreaseCoin
-        m_Mode: 3
+      - m_Target: {fileID: 1955207041}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &1600115800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600115792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b1f2da1a5d1c7d449f7683d59be9094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
-  _gameState: 1
-  _animator: {fileID: 0}
 --- !u!1 &1616394806
 GameObject:
   m_ObjectHideFlags: 0
@@ -6788,7 +6886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616394806}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 12, z: 0}
+  m_LocalPosition: {x: 0, y: 12.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8925,6 +9023,7 @@ GameObject:
   - component: {fileID: 2090988259}
   - component: {fileID: 2090988258}
   - component: {fileID: 2090988257}
+  - component: {fileID: 2090988260}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -8996,7 +9095,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2090988258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2090988260}
+        m_TargetAssemblyTypeName: SortItems.ChangeGameStateTo, Assembly-CSharp
+        m_MethodName: ChangeStateTo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2090988258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9035,6 +9146,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090988255}
   m_CullTransparentMesh: 1
+--- !u!114 &2090988260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090988255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1f2da1a5d1c7d449f7683d59be9094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameStateMachine: {fileID: 11400000, guid: 73480740f884f5746aaa726cc34db76b, type: 2}
+  _gameState: 1
+  _animator: {fileID: 1458086546}
 --- !u!1 &2098766099
 GameObject:
   m_ObjectHideFlags: 0

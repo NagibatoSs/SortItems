@@ -6,7 +6,7 @@ namespace SortItems
 {
     public class DragItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
-        [SerializeField] public float upForce = 50f;
+        [SerializeField] public float upForce = 20f;
         [SerializeField] private ItemType _type;
         [SerializeField] public string _itemId;
         public UnityEvent OnHideRequest;
@@ -24,6 +24,7 @@ namespace SortItems
         {
             _rigidbody.isKinematic = true;
             IsDraggable = true;
+            if (outItem!=null)
             outItem.isActive=true;
         }
 
@@ -33,6 +34,7 @@ namespace SortItems
             _rigidbody.isKinematic = false;
             _rigidbody.AddForce(Vector3.up*upForce);
             IsDraggable = false;
+            if (outItem!=null)
             outItem.isActive=false;
         }
 
@@ -43,6 +45,7 @@ namespace SortItems
             {
                 _rigidbody.isKinematic = false;
                 IsDraggable = false;
+                if (outItem!=null)
                 outItem.isActive=false;
                 return;
             }
