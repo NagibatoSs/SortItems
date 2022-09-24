@@ -22,19 +22,8 @@ namespace SortItems
             var item = other.gameObject.GetComponent<DragItem>();
             if (item==null) return;
             if (item!=null)
-                _item = item;
-                return;
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (!isActive) return;
-            var item = other.gameObject.GetComponent<DragItem>();
-            if (item==null) return;
-            Debug.Log("exit");
-            if (_item == item)
             {
-                Debug.Log("tryget exit");
+                _item = item;
                 if (item.IsDraggable == false)
                     TryGetItem();
                 _item=null;

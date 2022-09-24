@@ -23,6 +23,11 @@ namespace SortItems
             PlayerScriptableModel.OnLoad.RemoveListener(UpdateCoin);
         }
 
+        private void Start() 
+        {
+            CoinText.text = PlayerScriptableModel.Model.Coin.ToString();
+        }
+
         public void UpdateCoin()
         {
             CoinText.text = PlayerScriptableModel.Model.Coin.ToString();

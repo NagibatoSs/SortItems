@@ -9,7 +9,6 @@ namespace SortItems
         [SerializeField] private Animator _animator;
         [SerializeField] private string canvasName;
         public GameStateMachine GameStateMachine => _gameStateMachine;
-       // [SerializeField] List<Canvas>
         public UnityEvent OnChangeState;
 
         private void OnEnable() 
@@ -29,7 +28,6 @@ namespace SortItems
 
         private void OnChangeStateDelegate()
         {
-            Debug.Log("canvasName "+canvasName+ " GameState "+GameStateMachine.GameState.ToString());
             if (canvasName==GameStateMachine.GameState.ToString())
             OnChangeState.Invoke();
         }

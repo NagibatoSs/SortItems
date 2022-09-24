@@ -10,13 +10,9 @@ namespace SortItems
 
         public GameStateMachine GameStateMachine => _gameStateMachine;
 
-        private void Start() 
-        {
-            //_animator=gameObject.GetComponent<Animator>();
-        }
-
         public void ChangeStateTo()
         {
+            if (_animator!=null)
             _animator.SetTrigger("Close");
             GameStateMachine.GameState = _gameState;
         }

@@ -104,7 +104,6 @@ MonoBehaviour:
     getter: {fileID: 0}
     targetCount: 0
     count: 0
-  targetCount: 1
   isActive: 0
   onRemove:
     m_PersistentCalls:
@@ -328,6 +327,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2959551136885175801}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DORestartById
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DG.Tweening.DOTweenAnimation, DOTweenPro.Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SortItems.OutlineItem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477684290317607951, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7222978307101785537, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -338,6 +381,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3197d3d6087b37442943d160c6a0d5ca, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+--- !u!114 &2959551136885175801 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1739836677146189808, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}
+  m_PrefabInstance: {fileID: 3546395767803111945}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449175080574776850}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0390bd8b8ffd640b34fe25065ff1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &5234586870312802829 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8760531719531098116, guid: 9cce5b3d0622f4b43b9b16591becbd1c, type: 3}

@@ -6,7 +6,7 @@ namespace SortItems
     public class ItemTrail : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     {
         [SerializeField] private TrailRenderer _trailRenderer;
-
+        
         private void Awake()
         {
             _trailRenderer.emitting = false;

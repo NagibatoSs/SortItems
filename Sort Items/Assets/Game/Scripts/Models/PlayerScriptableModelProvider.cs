@@ -14,7 +14,6 @@ namespace SortItems
 
         protected void OnEnable() 
         {
-            Debug.Log("enable psmProvider");
             PlayerScriptableModel.OnLoad.AddListener(OnLoadDelegate);
             PlayerScriptableModel.Model.OnChange.AddListener(OnModelChangeDelegate);
         }
@@ -59,7 +58,6 @@ namespace SortItems
 
         public void OnLoadDelegate()
         {
-            Debug.Log("onLoadDel");
             PlayerScriptableModel.Model.OnChange.AddListener(OnModelChangeDelegate);
         }
     }

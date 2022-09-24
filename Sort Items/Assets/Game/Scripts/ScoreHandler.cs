@@ -42,7 +42,6 @@ namespace SortItems
             {
                 if (g.count < g.targetCount)
                 {
-                    Debug.Log(g.count+" g.count "+g.targetCount+ " g.targetcount");
                     isFull = false;
                     break;
                 }
@@ -50,7 +49,6 @@ namespace SortItems
 
             if (isFull)
             {
-                Debug.Log("full");
                 onFull.Invoke();
             }
         }
