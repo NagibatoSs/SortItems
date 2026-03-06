@@ -24,7 +24,6 @@ namespace SortItems
                 if (value<0) return;
                 SetData(ref _coin,value);
             }
-
         }
 
     }

@@ -18,7 +18,8 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     _playerName: Player1
-    _coin: 381
+    _coin: 275
+    _maxlevel: 2
   OnLoad:
     m_PersistentCalls:
       m_Calls: []

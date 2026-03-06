@@ -7,7 +7,7 @@ namespace SortItems
         [SerializeField] private Animator _animator;
         [SerializeField] private string _trigName;
 
-        private void Start() 
+        private void Start()
         {
             _animator.SetTrigger(_trigName);
         }

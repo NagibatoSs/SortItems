@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace SortItems
@@ -12,8 +13,14 @@ namespace SortItems
 
         public void ChangeStateTo()
         {
-            if (_animator!=null)
+            if (_animator == null)
+            {
+                var canvas = GameObject.Find("PlayCanvas");
+                _animator = canvas?.GetComponent<Animator>();
+            }
+
             _animator.SetTrigger("Close");
+            
             GameStateMachine.GameState = _gameState;
         }
     }

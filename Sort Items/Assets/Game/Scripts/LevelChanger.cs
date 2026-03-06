@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,52 +7,57 @@ namespace SortItems
 {
     public class LevelChanger : MonoBehaviour
     {
-        [SerializeField] private int levelNumber;
-        [SerializeField] private GameObject[] getters;
-        [SerializeField] private ItemSpawner oldItems;
-        
-        private void Start() 
-        {
-            var lastLevel = PlayerPrefs.GetInt("Level",0);
-            if (lastLevel != levelNumber)
-                LoadLevel(lastLevel);
-        }
+        [SerializeField] private int currentLevelNumber;
+        public int CurrentLevel => currentLevelNumber;
+        private GameObject currentLevel;
+        public Action OnLevelChanged;
+        public Action OnGameFinished;
 
         public void LoadNext()
         {
-            levelNumber++;
-            LoadLevel(levelNumber);
+            currentLevelNumber++;
+            LoadLevel(currentLevelNumber);
         }
 
         public void LoadLevel(int level)
-        { 
-            if (oldItems!=null)
-            RemoveItems(oldItems);
-            if (getters!=null)
-            foreach(var g in getters)
-                Destroy(g);
+        {
+            if (currentLevel != null)
+            {
+                Destroy(currentLevel);
+            }
+
             Vector3 vector = new Vector3(0,0,0);  
-            PlayerPrefs.SetInt("Level",level);  
-            var newLevel = Instantiate(Resources.Load<GameObject>("Prefabs/Levels/Level"+(level)),vector,Quaternion.identity);
+            PlayerPrefs.SetInt("Level",level);
+
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/Levels/Level" + (level));
+            if (prefab != null)
+            {
+                currentLevelNumber = level;
+                currentLevel = Instantiate(prefab, vector, Quaternion.identity);
+                Debug.Log("Load level " + prefab.name);
+            }  
+            else
+            {
+                OnGameFinished?.Invoke();
+            }
+            OnLevelChanged?.Invoke();
         }
 
         public void RestartLevel()
         {
-            if (oldItems!=null)
-            RemoveItems(oldItems);
-            if (getters!=null)
-            foreach(var g in getters)
-                Destroy(g);
-            Vector3 vector = new Vector3(0,0,0);   
-            var newLevel = Instantiate(Resources.Load<GameObject>("Prefabs/Levels/Level"+levelNumber),vector,Quaternion.identity);
-        }
-        
-        public void RemoveItems(ItemSpawner oldItems)
-        {
-            foreach(var child in oldItems.GetComponentsInChildren<Transform>())
-            {  
-                Destroy(child.gameObject);
+            if (currentLevel != null)
+            {
+                Destroy(currentLevel);
+            }
+
+            Vector3 vector = new Vector3(0,0,0);
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/Levels/Level"  + currentLevelNumber);
+            if (prefab != null)
+            {
+                currentLevel= Instantiate(prefab, vector, Quaternion.identity);
+                Debug.Log("Load level " + prefab.name);
             }
         }
+        
     }
 }

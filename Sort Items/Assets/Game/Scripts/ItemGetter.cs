@@ -10,7 +10,7 @@ namespace SortItems
         [SerializeField] public ItemType _type;
         [SerializeField] public string _itemId;
         private DragItem _item;
-        [SerializeField] public GetterParameters _getter;
+        [SerializeField] GameObject _getter;
 
         [HideInInspector] public bool isActive = false;
 
@@ -41,8 +41,20 @@ namespace SortItems
                 item2.gameObject.GetComponents<BoxCollider>()[1].enabled = false;
                 _item.OnHideRequest.Invoke();
                 item2.OnHideRequest.Invoke();
-                onRemove.Invoke();
+                OnRemoveHandler();
             }
         } 
+
+        private void OnRemoveHandler()
+        {
+            var getter = _getter.GetComponent<Getter>();
+            getter.IncreaseCount();
+            var scoreHandler = _getter.GetComponent<ScoreHandler>();
+            scoreHandler.OnCountChanged(getter);
+        }
+        public void Init(GameObject getter)
+        {
+            _getter = getter;
+        }
     }
 }
