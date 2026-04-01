@@ -27,6 +27,7 @@ namespace SortItems
 
         public void ResetPool()
         {
+            if (_items == null) return;
             _items.ForEach(item => 
             {
                 if (item!=null && item.gameObject!=null)

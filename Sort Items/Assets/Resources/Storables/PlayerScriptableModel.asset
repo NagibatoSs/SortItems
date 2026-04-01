@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: PlayerScriptableModel
   m_EditorClassIdentifier: 
   _model:
-    _name: PlayerModel
+    _name: PlayerModel1
     OnChange:
       m_PersistentCalls:
         m_Calls: []
-    _playerName: Player1
-    _coin: 275
-    _maxlevel: 2
+    _playerName: Player
+    _coin: 0
   OnLoad:
     m_PersistentCalls:
       m_Calls: []

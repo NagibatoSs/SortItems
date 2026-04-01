@@ -25,5 +25,23 @@ namespace SortItems
                 (scriptableModel as IStorable)?.Save();
             });
         }
+
+        private void OnApplicationPause(bool pause)
+        {
+            if (pause)
+            {
+                ScriptableModelsList.ForEach(scriptableModel =>
+                {
+                    (scriptableModel as IStorable)?.Save();
+                });
+            }
+        }
+        private void OnApplicationQuit()
+        {
+            ScriptableModelsList.ForEach(scriptableModel =>
+            {
+                (scriptableModel as IStorable)?.Save();
+            });
+        }
     }
 }
