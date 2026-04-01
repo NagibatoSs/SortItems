@@ -8,16 +8,17 @@
 <p align="center">
   <img src="./Screenshots/gameplay.gif" width="200"/>
 </p>
-<p align="center">
-  <img src="./Screenshots/screen1.png" width="200"/>
-  <img src="./Screenshots/screen3.png" width="200"/>
-  <img src="./Screenshots/screen2.png" width="200"/>
-</p>
 
 ## Описание:
 Игра разработана в рамках курса повышения квалификации "Разработка игр на Unity".
 В каждом уровне игроку необходимо очистить игровое поле от мусора, соединяя объекты одинакового типа.
 На сцене также присутствуют объекты, не относящиеся к мусору, что усложняет игровой процесс.
+
+<p align="center">
+  <img src="./Screenshots/screen1.png" width="200"/>
+  <img src="./Screenshots/screen3.png" width="200"/>
+  <img src="./Screenshots/screen2.png" width="200"/>
+</p>
 
 ## Ключевые особенности:
 - Механика соединения объектов одинакового типа
